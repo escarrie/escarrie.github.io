@@ -1,6 +1,6 @@
-import SimplexNoise from "simplex-noise";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger.js";
+import SimplexNoise from "./simplex-noise";
+import { gsap } from "./gsap";
+import { ScrollTrigger } from "./gsap/ScrollTrigger.js";
 import "./base.css";
 import "./style.css";
 
