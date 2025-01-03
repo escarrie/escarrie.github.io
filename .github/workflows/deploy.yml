@@ -1,0 +1,38 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master # ou main, selon votre branche principale
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Étape 1 : Vérifiez le code source
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Étape 2 : Installez Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # Remplacez par la version Node.js que vous utilisez
+
+      # Étape 3 : Installez les dépendances
+      - name: Install dependencies
+        run: npm install
+
+      # Étape 4 : Build et export du projet
+      - name: Build and export
+        run: |
+          npm run build
+          touch out/.nojekyll
+
+      # Étape 5 : Déployez sur la branche gh-pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
