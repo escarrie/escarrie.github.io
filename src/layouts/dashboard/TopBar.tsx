@@ -15,8 +15,6 @@ import Switch from '@mui/material/Switch'
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
 
 const pages = [
     'Profil',

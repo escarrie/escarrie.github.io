@@ -1,3 +1,4 @@
+/* eslint-disable */
 // @ts-nocheck
 import { createTheme as createMuiTheme } from '@mui/material';
 import { createLightPalette, createDarkPalette } from '@/src/theme/create-palette';

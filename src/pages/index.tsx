@@ -1,4 +1,4 @@
-import { Container, Box, Grid2 as Grid, Typography, useTheme } from '@mui/material';
+import { Container, Box, Grid2 as Grid, useTheme } from '@mui/material';
 import Head from 'next/head';
 
 const Home = () => {
