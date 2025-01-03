@@ -93,7 +93,7 @@ const Topbar = () => {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="sticky">
             <Container maxWidth="xl"
                 sx={{
                     height: '75px'
