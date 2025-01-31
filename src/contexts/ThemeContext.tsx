@@ -19,8 +19,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
         if (savedMode && (savedMode === 'light' || savedMode === 'dark')) {
             setMode(savedMode);
         } else {
-            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            setMode(prefersDarkScheme ? 'dark' : 'light');
+            setMode('light');
         }
     }, []);
 
