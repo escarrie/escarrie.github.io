@@ -7,7 +7,19 @@ import { poems } from '@/src/config/poems';
 const Home = () => {
     const { palette } = useTheme();
     const [activeStep, setActiveStep] = useState(0);
-    const today = dayjs();
+    const today = dayjs("2025-02-15");
+
+    useEffect(() => {
+        poems.forEach((poem, index) => {
+            if (today.isAfter(dayjs(poem.date))) {
+                setActiveStep(index + 1);
+            }
+
+            if (today.isSame(dayjs(poem.date))) {
+                setActiveStep(index + 1);
+            }
+        });
+    }, []);
 
     return (
         <>
@@ -17,18 +29,26 @@ const Home = () => {
             <Box sx={{ padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Stepper activeStep={activeStep} orientation="vertical" sx={{ justifyContent: 'center', alignItems: 'center' }}>
                     {poems.map((poem, index) => (
-                        <Step key={index} sx={{
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                        }}>
+                        <Step
+                            key={index}
+                            sx={{
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }}
+                            active={activeStep > index}
+                        >
                             <StepLabel>
-                                <Typography variant="h6">Jour {index + 1}</Typography>
+                                <Typography>
+                                    {dayjs(poem.date).format('D-M-YYYY')} - Jour {index + 1}
+                                </Typography>
                             </StepLabel>
                             <Box sx={{ padding: '1rem', backgroundColor: activeStep > index ? '#e0f7fa' : '#f3f3f3' }}>
                                 {activeStep > index ? (
-                                    <Typography>{poem.content}</Typography>
+                                    <Typography sx={{whiteSpace: 'pre-wrap'}}>
+                                        {poem.content}
+                                    </Typography>
                                 ) : (
-                                    <Timer targetDate={poem.date} />
+                                    <Timer targetDate={poem.date} poem={poem.content} />
                                 )}
                             </Box>
                         </Step>
@@ -39,7 +59,7 @@ const Home = () => {
     );
 }
 
-function Timer({ targetDate }: { targetDate: string }) {
+function Timer({ targetDate, poem }: { targetDate: string, poem: string }) {
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
     useEffect(() => {
@@ -50,7 +70,7 @@ function Timer({ targetDate }: { targetDate: string }) {
     }, []);
 
     function calculateTimeLeft() {
-        const difference = dayjs(targetDate).diff(dayjs());
+        const difference = dayjs(targetDate).diff(dayjs("2025-02-15"));
         if (difference <= 0) return null;
 
         return {
@@ -61,7 +81,13 @@ function Timer({ targetDate }: { targetDate: string }) {
         };
     }
 
-    if (!timeLeft) return <Typography>Débloqué !</Typography>;
+    if (!timeLeft) {
+        return (
+            <Typography sx={{ whiteSpace: "pre-wrap" }}>
+                {poem}
+            </Typography>
+        );
+    }
 
     return (
         <Typography>

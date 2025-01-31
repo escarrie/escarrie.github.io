@@ -1,7 +1,7 @@
 export const poems = [
-    { date: '2025-02-14', content: 'Poème 1 : Une belle introduction.' },
-    { date: '2025-02-15', content: 'Poème 2 : Un doux souvenir.' },
-    { date: '2025-02-16', content: 'Poème 3 : La magie de l\'instant.' },
+    { date: '2025-02-14', content: 'Je suis parti il y a quelques heures,\nflottant sans bruit au creux des nuages.\nSous mes yeux, le monde s’efface,\net je rêve de nous, légers comme l’air,\nsurvolant l’infini.\n\nJe nous vois danser, portés par le vent,\neffleurant l’éclat des cieux.\nLà-haut, où le soleil s’endort en feu,\nnous serions libres, suspendus au temps,\nà chaque battement d’aile partagé.' },
+    { date: '2025-02-15', content: 'J’atterris dans quelques heures, probablement,\nLes rêves en cascade au creux de la tête,\nEt mon cœur, débordant d’un amour pour toi,\nComme un feu doux qui ne s’éteint jamais.' },
+    { date: '2025-02-16', content: '' },
     { date: '2025-02-17', content: 'Poème 4 : Un souffle de vie.' },
     { date: '2025-02-18', content: 'Poème 5 : L\'éveil des sens.' },
     { date: '2025-02-19', content: 'Poème 6 : Une douce mélodie.' },
