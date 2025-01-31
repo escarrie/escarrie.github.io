@@ -1,88 +1,72 @@
-import { Container, Box, Grid2 as Grid, useTheme } from '@mui/material';
+import { Container, Box, Grid2 as Grid, useTheme, Typography, Stepper, Step, StepLabel } from '@mui/material';
+import dayjs from 'dayjs';
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
+import { poems } from '@/src/config/poems';
 
 const Home = () => {
     const { palette } = useTheme();
+    const [activeStep, setActiveStep] = useState(0);
+    const today = dayjs();
 
     return (
         <>
             <Head>
                 <title>Esteban Carrière - portfolio</title>
             </Head>
-            <Box
-                component="main"
-                sx={{
-                    flexGrow: 1,
-                    maxWidth: "100vw",
-                }}
-            >
-                <Container
-                    sx={{
-                        position: 'relative',
-                        minHeight: 'calc(100dvh-64px)',
-                        minWidth: '100% !important',
-                        maxWidth: "100vw",
-                    }}
-                >
-                    <Box
-                        sx={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            right: 0,
-                            bottom: 0,
-                            backgroundImage: `url('/background-${palette.mode == "dark" ? 'dark' : 'light'}.jpg')`,
-                            backgroundAttachment: 'fixed',
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            opacity: 0.5,
-                        }}
-                    />
-                    <Grid
-                        container
-                        sx={{
-                            position: 'relative',
-                            zIndex: 1,
-                            minHeight: 'calc(100dvh - 75px)',
-                            display: 'flex',
-                            alignItems: 'center',
+            <Box sx={{ padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <Stepper activeStep={activeStep} orientation="vertical" sx={{ justifyContent: 'center', alignItems: 'center' }}>
+                    {poems.map((poem, index) => (
+                        <Step key={index} sx={{
                             justifyContent: 'center',
-                            maxWidth: "100vw !important",
-                            paddingX: 20,
-                        }}
-                        spacing={3}
-                    >
-                        <Grid
-                            size={{
-                                xs: 12,
-                                sm: 6,
-                                md: 4,
-                            }}
-                        >
-                            <Box
-                                component="img"
-                                src="/banner.svg"
-                                alt="Banner"
-                                sx={{
-                                    width: '100%',
-                                    height: 'auto',
-                                }}
-                            />
-                        </Grid>
-
-                        <Grid
-                            size={{
-                                xs: 12,
-                                sm: 6,
-                                md: 8,
-                            }}
-                        >
-                            
-                        </Grid>
-                    </Grid>
-                </Container>
+                            alignItems: 'center',
+                        }}>
+                            <StepLabel>
+                                <Typography variant="h6">Jour {index + 1}</Typography>
+                            </StepLabel>
+                            <Box sx={{ padding: '1rem', backgroundColor: activeStep > index ? '#e0f7fa' : '#f3f3f3' }}>
+                                {activeStep > index ? (
+                                    <Typography>{poem.content}</Typography>
+                                ) : (
+                                    <Timer targetDate={poem.date} />
+                                )}
+                            </Box>
+                        </Step>
+                    ))}
+                </Stepper>
             </Box>
         </>
+    );
+}
+
+function Timer({ targetDate }: { targetDate: string }) {
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(calculateTimeLeft());
+        }, 1000);
+        return () => clearInterval(timer);
+    }, []);
+
+    function calculateTimeLeft() {
+        const difference = dayjs(targetDate).diff(dayjs());
+        if (difference <= 0) return null;
+
+        return {
+            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+            minutes: Math.floor((difference / 1000 / 60) % 60),
+            seconds: Math.floor((difference / 1000) % 60),
+        };
+    }
+
+    if (!timeLeft) return <Typography>Débloqué !</Typography>;
+
+    return (
+        <Typography>
+            Débloque dans {timeLeft.days}j {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+        </Typography>
     );
 }
 

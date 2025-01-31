@@ -115,10 +115,10 @@ const Topbar = () => {
                             textDecoration: 'none',
                         }}
                     >
-                        Esteban Carrière
+                        Un jour un petit mot
                     </Typography>
 
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                    {/* <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -180,9 +180,9 @@ const Topbar = () => {
                                 {page}
                             </Button>
                         ))}
-                    </Box>
+                    </Box> */}
 
-                    <Box sx={{ flexGrow: 0 }}>
+                    {/* <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open Linkedin" arrow>
                             <IconButton target='_blank' sx={{ ml: 1, py: 0, color: 'white' }} href='https://www.linkedin.com/in/esteban-carri%C3%A8re-0655a8191/'>
                                 <LinkedInIcon />
@@ -198,11 +198,11 @@ const Topbar = () => {
                                 checked={mode === 'dark'}
                                 onChange={() => {
                                     setMode(mode === 'dark' ? 'light' : 'dark');
-                                    localStorage.setItem('theme', mode === 'dark' ? 'light' : 'dark');
+                                    localStorage.setItem('themeMode', mode === 'dark' ? 'light' : 'dark');
                                 }}
                             />
                         </Tooltip>
-                    </Box>
+                    </Box> */}
                 </Toolbar>
             </Container>
         </AppBar>
