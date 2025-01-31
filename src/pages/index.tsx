@@ -2,23 +2,26 @@ import { poems } from '@/src/config/poems';
 import { Box, Step, StepLabel, Stepper, Typography } from '@mui/material';
 import dayjs from 'dayjs';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const Home = () => {
     const [activeStep, setActiveStep] = useState(0);
     const today = dayjs();
+    const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
 
     useEffect(() => {
         poems.forEach((poem, index) => {
-            if (today.isAfter(dayjs(poem.date))) {
-                setActiveStep(index + 1);
-            }
-
-            if (today.isSame(dayjs(poem.date))) {
+            if (today.isAfter(dayjs(poem.date)) || today.isSame(dayjs(poem.date))) {
                 setActiveStep(index + 1);
             }
         });
     }, []);
+
+    useEffect(() => {
+        if (stepRefs.current[activeStep]) {
+            stepRefs.current[activeStep]?.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [activeStep]);
 
     return (
         <>
@@ -35,6 +38,7 @@ const Home = () => {
                                 alignItems: 'center',
                             }}
                             active={activeStep > index}
+                            ref={el => (stepRefs.current[index] = el)}
                         >
                             <StepLabel>
                                 <Typography>
