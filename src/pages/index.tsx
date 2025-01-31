@@ -1,13 +1,12 @@
-import { Container, Box, Grid2 as Grid, useTheme, Typography, Stepper, Step, StepLabel } from '@mui/material';
+import { poems } from '@/src/config/poems';
+import { Box, Step, StepLabel, Stepper, Typography } from '@mui/material';
 import dayjs from 'dayjs';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import { poems } from '@/src/config/poems';
 
 const Home = () => {
-    const { palette } = useTheme();
     const [activeStep, setActiveStep] = useState(0);
-    const today = dayjs("2025-02-15");
+    const today = dayjs();
 
     useEffect(() => {
         poems.forEach((poem, index) => {
@@ -70,7 +69,7 @@ function Timer({ targetDate, poem }: { targetDate: string, poem: string }) {
     }, []);
 
     function calculateTimeLeft() {
-        const difference = dayjs(targetDate).diff(dayjs("2025-02-15"));
+        const difference = dayjs(targetDate).diff(dayjs());
         if (difference <= 0) return null;
 
         return {
