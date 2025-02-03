@@ -15,7 +15,7 @@ const Home = () => {
                 setActiveStep(index + 1);
             }
         });
-    }, []);
+    }, [today]);
 
     useEffect(() => {
         if (stepRefs.current[activeStep]) {
@@ -31,6 +31,7 @@ const Home = () => {
             <Box sx={{ padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Stepper activeStep={activeStep} orientation="vertical" sx={{ justifyContent: 'center', alignItems: 'center' }}>
                     {poems.map((poem, index) => (
+                        // @ts-expect-error ref is not a valid prop for Step
                         <Step
                             key={index}
                             sx={{
@@ -70,7 +71,7 @@ function Timer({ targetDate, poem }: { targetDate: string, poem: string }) {
             setTimeLeft(calculateTimeLeft());
         }, 1000);
         return () => clearInterval(timer);
-    }, []);
+    }, [calculateTimeLeft]);
 
     function calculateTimeLeft() {
         const difference = dayjs(targetDate).diff(dayjs());
