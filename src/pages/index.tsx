@@ -3,6 +3,7 @@ import { Box, Step, StepLabel, Stepper, Typography } from '@mui/material';
 import dayjs from 'dayjs';
 import Head from 'next/head';
 import { useEffect, useRef, useState } from 'react';
+import { emojify } from "node-emoji"
 
 const Home = () => {
     const [activeStep, setActiveStep] = useState(0);
@@ -49,7 +50,7 @@ const Home = () => {
                             <Box sx={{ padding: '1rem', backgroundColor: activeStep > index ? '#e0f7fa' : '#f3f3f3' }}>
                                 {activeStep > index ? (
                                     <Typography sx={{whiteSpace: 'pre-wrap'}}>
-                                        {poem.content}
+                                        {emojify(poem.content)}
                                     </Typography>
                                 ) : (
                                     <Timer targetDate={poem.date} poem={poem.content} />
@@ -88,7 +89,7 @@ function Timer({ targetDate, poem }: { targetDate: string, poem: string }) {
     if (!timeLeft) {
         return (
             <Typography sx={{ whiteSpace: "pre-wrap" }}>
-                {poem}
+                {emojify(poem)}
             </Typography>
         );
     }

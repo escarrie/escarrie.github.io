@@ -9,7 +9,7 @@ export const poems = [
     { date: '2025-02-21', content: 'Les rêves m’ont mené au bord des cimes,\nOù le monde s’endort sous un ciel opalin.\nMais c’est ton regard, étoile ultime,\nQui éclaire mes nuits sans fin.' },
     { date: '2025-02-22', content: 'Je découvre des paysages incroyables, mais aucun ne rivalise avec la beauté de ton visage. Tu es ma maison.' },
     { date: '2025-02-23', content: 'Au cœur d’une clairière silencieuse,\nLe vent dépose un baiser discret.\nJe l’imagine voyager vers toi,\nDéposant mon amour en secret.' },
-    { date: '2025-02-24', content: 'Même au bout du monde, tu es mon point de repère. Je compte les jours avant de te revoir.' },
+    { date: '2025-02-24', content: 'Même au bout du monde, tu es mon point de repère. Je compte les jours avant de te revoir. (10 Jours mon amour :heart:)' },
     { date: '2025-02-25', content: 'Chante encore cette mélodie,\nCelle que les étoiles écoutent en silence.\nTes mots, doux échos infinis,\nDansent en moi avec élégance.' },
     { date: '2025-02-26', content: 'Ton amour est mon talisman, ma lumière dans ce voyage. Tu es dans chaque pensée, dans chaque paysage.' },
     { date: '2025-02-27', content: 'Le rire éclate comme un feu de joie,\nSous la voûte étoilée d’un soir complice.\nAvec toi, même l’éternité ploie,\nCar chaque instant devient délice.' },
