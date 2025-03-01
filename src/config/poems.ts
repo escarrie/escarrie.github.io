@@ -15,9 +15,9 @@ export const poems = [
     { date: '2025-02-27', content: 'Le rire éclate comme un feu de joie,\nSous la voûte étoilée d’un soir complice.\nAvec toi, même l’éternité ploie,\nCar chaque instant devient délice.' },
     { date: '2025-02-28', content: 'Je me promène dans des temples sacrés, mais mon plus grand sanctuaire reste ton cœur. Merci d’être celle que j’aime.' },
     { date: '2025-03-01', content: 'Dans la tempête et ses tourments,\nJe trouve refuge entre tes bras.\nTon amour est l’ancre des éléments,\nEt ma boussole ne tremble pas.' },
-    { date: '2025-03-02', content: 'Quand la brume s’étire sur l’horizon,\nJ’entends le souffle léger de l’espoir.\nTon sourire trace une nouvelle saison,\nOù chaque aurore est une victoire.' },
+    { date: '2025-03-02', content: 'Dans l’éclat de tes yeux, un serment éternel,\nUn amour sans faille, doux et solennel,\nAncré dans l’âme comme un phare immortel.\n\nQu’importent les vents, les tempêtes et l’oubli,\nMa main dans la tienne, jamais affaiblie,\nFidèle à ton cœur, jusqu’au dernier cri.' },
     { date: '2025-03-03', content: 'Aujourd’hui est un jour particulier, mon anniversaire.\nHabituellement, je le fête seul, entouré de réflexions et de souvenirs. Mais aujourd’hui, plus que jamais, j’aurais aimé t’avoir à mes côtés.\n\nChaque instant passé loin de toi me rappelle à quel point tu es devenue essentielle dans ma vie. Ce n’est pas seulement une question de présence physique, mais une envie profonde de te voir partager ces moments, grands ou petits.\n\nJe ressens une immense hâte de te revoir, de te serrer contre moi, de te raconter ce que j’ai vu et vécu ici. Pourtant, rien de ce que je vis au Japon ne peut égaler ce que je ressens quand je suis avec toi.\n\nAujourd’hui, plus que tout, je me rends compte de l’importance de construire avec toi quelque chose de sincère, de durable, et de beau. Un lien qui transcende les distances et les épreuves.\n\nMerci d’être celle qui, même de loin, fait battre mon cœur plus fort. Je t’aime.' },
-    { date: '2025-03-04', content: 'Poème 19 : Un instant de bonheur.' },
-    { date: '2025-03-05', content: 'Poème 20 : La beauté du silence.' },
-    { date: '2025-03-06', content: 'Poème final : L\'apothéose.' },
+    { date: '2025-03-04', content: 'Sous la pluie de Kanazawa, mon cœur s\'égare,\nLes ruelles dorées murmurent ton nom,\nChaque pas me rapproche du doux départ.' },
+    { date: '2025-03-05', content: 'Le vent caresse les jardins endormis,\nLes arbres nus gardent le secret du temps,\nComme moi, ils attendent ton retour promis.' },
+    { date: '2025-03-06', content: 'ce soir s\'efface l\'écho de l\'absence,\nPlus qu\’un instant avant nos retrouvailles,\nEt nos cœurs en fête briseront le silence.' },
 ]
