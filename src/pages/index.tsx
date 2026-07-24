@@ -27,7 +27,7 @@ const Home = () => {
     return (
         <>
             <Head>
-                <title>Esteban Carrière - portfolio</title>
+                <title>For you</title>
             </Head>
             <Box sx={{ padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Stepper activeStep={activeStep} orientation="vertical" sx={{ justifyContent: 'center', alignItems: 'center' }}>
