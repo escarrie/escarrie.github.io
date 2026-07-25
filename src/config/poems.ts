@@ -7,7 +7,7 @@ export const poems = [
     { date: '2026-07-30', content: 'Il semble que ' },
     { date: '2026-07-31', content: 'Tu poses les mots,\ncomme on pose une main sur une épaule :\nsans appuyer, sans réclamer,\njuste assez pour qu\'on sache\nque quelqu\'un est là.\nIl y a des gens qui parlent pour occuper l\'espace.\nToi tu parles pour le rendre habitable.' },
     { date: '2026-08-01', content: 'Quand tu écoutes,\nle monde ralentit d\'un cran.\nLes phrases ont le temps de finir,\nles silences ne sont plus gênants,\net on s\'entend penser.\nC\'est rare, quelqu\'un qui écoute vraiment.\nOn repart de ces moments-là\nen respirant mieux qu\'en arrivant.' },
-    { date: '2026-08-02', content: '' },
+    { date: '2026-08-02', content: 'Belle, intelligente et attentionnée.\nÀ toi, je veux dire ce que je pense,\nje veux te dire que tu es importante.' },
     { date: '2026-08-03', content: '' },
     { date: '2026-08-04', content: '' },
     { date: '2026-08-05', content: '' },
