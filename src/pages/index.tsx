@@ -49,9 +49,19 @@ const Home = () => {
                             </StepLabel>
                             <Box sx={{ padding: '1rem', backgroundColor: activeStep > index ? '#e0f7fa' : '#f3f3f3' }}>
                                 {activeStep > index ? (
-                                    <Typography sx={{whiteSpace: 'pre-wrap'}}>
-                                        {emojify(poem.content)}
-                                    </Typography>
+                                    <>
+                                        <Typography sx={{whiteSpace: 'pre-wrap'}}>
+                                            {emojify(poem.content)}
+                                        </Typography>
+                                        {poem.image && poem.src && (
+                                            <Box
+                                                component="img"
+                                                src={`/${poem.src}`}
+                                                alt=""
+                                                sx={{ maxWidth: '100%', marginTop: '1rem', borderRadius: 1 }}
+                                            />
+                                        )}
+                                    </>
                                 ) : (
                                     <Timer targetDate={poem.date} poem={poem.content} />
                                 )}
