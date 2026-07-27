@@ -2,7 +2,7 @@ export const poems = [
     { date: '2026-07-25', content: 'Laisse le temps faire son travail.\nMoi je suis là, sans horloge,\nsans liste, sans attente cachée\nqui te tomberait dessus un jour.\n\nOn verra bien ce que ça donne.\nEt ce que ça donne, ça me va.' },
     { date: '2026-07-26', content: 'Avec toi, tout semble possible.' },
     { date: '2026-07-27', content: 'Ton sourire est ma plus grande joie.' },
-    { date: '2026-07-28', content: 'Tu es mon refuge, ma lumière.' },
+    { date: '2026-07-28', content: 'Mon coeur me dit que c\'est ta fête,\nJe crois toujours mon coeur quand il parle de toi.\nOulfi, que faut-il donc que ce coeur te souhaite?\nDes motos? Des maisons? Des balades?\nNon, ma foi!\nMais un bonheur égal au mien quand je te vois.\n\n(Victor Hugo mais retravaillé)' },
     { date: '2026-07-29', content: 'Dans chaque instant, je trouve ta présence.' },
     { date: '2026-07-30', content: 'Le Sentiment Flou\n\nUn amour sans nom, un feu sans visage,\nQui brille la nuit au fond de mes pas.\nEst-ce un doux vent, est-ce un vain mirage,\nUn lien si fort qu\'on ne nomme pas ?\n\nJe ne sais rien de cette douce emprise,\nQui tremble et rit au bord de mes yeux.\nC\'est un secret que le vent déguise,\nUn peu de terre et beaucoup de cieux.\nNi tout à fait l\'ami, ni tout l\'autre,\nJuste un écho qui berce mon sort.\nUn doux mystère qui devient nôtre,\nUn fil incertain qui rend plus fort.' },
     { date: '2026-07-31', content: 'Tu poses les mots,\ncomme on pose une main sur une épaule :\nsans appuyer, sans réclamer,\njuste assez pour qu\'on sache\nque quelqu\'un est là.\nIl y a des gens qui parlent pour occuper l\'espace.\nToi tu parles pour le rendre habitable.' },
