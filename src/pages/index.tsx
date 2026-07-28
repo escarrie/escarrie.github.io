@@ -58,7 +58,7 @@ const Home = () => {
                                                 component="img"
                                                 src={`/${poem.src}`}
                                                 alt=""
-                                                sx={{ maxWidth: '100%', marginTop: '1rem', borderRadius: 1 }}
+                                                sx={{ maxWidth: '1080px', marginTop: '1rem', borderRadius: 1 }}
                                             />
                                         )}
                                     </>
