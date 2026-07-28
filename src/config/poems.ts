@@ -12,7 +12,7 @@ export const poems = [
     { date: '2026-08-04', content: 'Mon coeur me dit que c\'est ta fête,\nJe crois toujours mon coeur quand il parle de toi.\nOulfi, que faut-il donc que ce coeur te souhaite?\nDes motos? Des maisons? Des balades?\nNon, ma foi!\nMais un bonheur égal au mien quand je te vois.\n\n(Victor Hugo mais retravaillé)' },
     { date: '2026-08-05', content: 'Un premier jet au crayon.', src: "IMG_0207.png", image: true },
     { date: '2026-08-06', content: 'Maintenant le stylo' , src: "IMG_0211.png", image: true },
-    { date: '2025-08-07', content: 'Et là, la couleur !' , src: "IMG_0210.png", image: true },
+    { date: '2026-08-07', content: 'Et là, la couleur !' , src: "IMG_0210.png", image: true },
     { date: '2026-08-08', content: '' },
     { date: '2026-08-09', content: '' },
     { date: '2026-08-10', content: '' },
