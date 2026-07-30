@@ -13,10 +13,6 @@ export const poems = [
     { date: '2026-08-05', content: 'Un premier jet au crayon.', src: "IMG_0207.png", image: true },
     { date: '2026-08-06', content: 'Maintenant le stylo' , src: "IMG_0211.png", image: true },
     { date: '2026-08-07', content: 'Et là, la couleur !' , src: "IMG_0210.png", image: true },
-    { date: '2026-08-08', content: '' },
+    { date: '2026-08-08', content: 'Plus qu\'une nuit avant de pouvoir te serrer dans mes bras.\nJ\'ai trop hâte.' },
     { date: '2026-08-09', content: '' },
-    { date: '2026-08-10', content: '' },
-    { date: '2026-08-11', content: '' },
-    { date: '2026-08-12', content: '' },
-    { date: '2026-08-13', content: '' },
 ]
