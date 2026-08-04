@@ -13,6 +13,6 @@ export const poems = [
     { date: '2026-08-05', content: 'Un premier jet au crayon.', src: "IMG_0207.png", image: true },
     { date: '2026-08-06', content: 'Maintenant le stylo' , src: "IMG_0211.png", image: true },
     { date: '2026-08-07', content: 'Et là, la couleur !' , src: "IMG_0210.png", image: true },
-    { date: '2026-08-08', content: 'Plus qu\'une nuit avant de pouvoir te serrer dans mes bras.\nJ\'ai trop hâte.' },
-    { date: '2026-08-09', content: '' },
+    { date: '2026-08-08', content: 'En attendant ton retour, je compte les heures, les minutes, les secondes.\nLe temps passe, mais je ne peux attendre.\n Alors le voici le stickers fini avec ombrage', image: true, src: "IMG_212.png" },
+    { date: '2026-08-01', content: 'Et plus que quelque heure avant ton retour dans mes bras, j\'envie déjà le moment où tu seras là.', video: true, src: "VID_213.mov" },
 ]

@@ -61,6 +61,14 @@ const Home = () => {
                                                 sx={{ maxWidth: '1080px', marginTop: '1rem', borderRadius: 1 }}
                                             />
                                         )}
+                                        {poem.video && poem.src && (
+                                            <Box
+                                                component="video"
+                                                src={`/${poem.src}`}
+                                                controls
+                                                sx={{ maxWidth: '1080px', marginTop: '1rem', borderRadius: 1 }}
+                                            />
+                                        )}
                                     </>
                                 ) : (
                                     <Timer targetDate={poem.date} poem={poem.content} />
