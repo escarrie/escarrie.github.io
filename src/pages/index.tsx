@@ -58,7 +58,7 @@ const Home = () => {
                                                 component="img"
                                                 src={`/${poem.src}`}
                                                 alt=""
-                                                sx={{ maxWidth: '1080px', marginTop: '1rem', borderRadius: 1 }}
+                                                sx={{ maxWidth: '100dvw', marginTop: '1rem', borderRadius: 1, width: '100%', height: 'auto' }}
                                             />
                                         )}
                                         {poem.video && poem.src && (
@@ -66,7 +66,7 @@ const Home = () => {
                                                 component="video"
                                                 src={`/${poem.src}`}
                                                 controls
-                                                sx={{ maxWidth: '1080px', marginTop: '1rem', borderRadius: 1 }}
+                                                sx={{ maxWidth: '100dvw', marginTop: '1rem', borderRadius: 1, width: '100%', height: 'auto' }}
                                             />
                                         )}
                                     </>
